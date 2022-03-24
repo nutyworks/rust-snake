@@ -79,7 +79,7 @@ impl GameState {
             .filter(move |pos| !snake_positions.contains(pos))
             .collect::<Vec<_>>();
 
-        let new_position = remaining_space.choose(&mut rng).clone();
+        let new_position = remaining_space.choose(&mut rng);
 
         if let Some(new_position) = new_position {
             self.apple_position = *new_position;
